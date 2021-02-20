@@ -35,7 +35,7 @@
   "dependencies": {
     "fs-extra": "^9.1.0",
     "pixelmatch": "^5.2.1",
-    "pngjs": "^6.0.0"
+    "pngjs": "^5.0.0"
   },
   "devDependencies": {
     "@dword-design/base": "^7.0.7",
