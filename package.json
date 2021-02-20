@@ -1,0 +1,48 @@
+{
+  "name": "jest-image-matcher",
+  "version": "1.0.0",
+  "description": "A Jest matcher for image comparisons based on pixelmatch. Can also be used with Mocha. Useful for visual regression testing.",
+  "keywords": [
+    "assert",
+    "compare",
+    "comparison",
+    "expect",
+    "extend",
+    "image",
+    "jest",
+    "match",
+    "matcher",
+    "mocha",
+    "regression",
+    "visual"
+  ],
+  "repository": "dword-design/jest-image-matcher",
+  "license": "MIT",
+  "author": "Sebastian Landwehr <info@dword-design.de>",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "check-unknown-files": "base check-unknown-files",
+    "commit": "base commit",
+    "dev": "base dev",
+    "lint": "base lint",
+    "prepare": "base prepare",
+    "prepublishOnly": "base prepublishOnly",
+    "test": "base test"
+  },
+  "dependencies": {
+    "fs-extra": "^9.1.0",
+    "pixelmatch": "^5.2.1",
+    "pngjs": "^6.0.0"
+  },
+  "devDependencies": {
+    "@dword-design/base": "^7.0.7",
+    "sharp": "^0.27.1",
+    "with-local-tmp-dir": "^2.2.15"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
