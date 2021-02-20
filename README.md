@@ -63,8 +63,8 @@ expect.extend({ toMatchImage })
 it('should match', async () => {
   // get an image from somewhere as a buffer,
   // like reading it from the file system
-  const image1 = await fs.readFile('image1.png')
-  const image2 = await fs.readFile('image2.png')
+  const image1 = fs.readFileSync('image1.png')
+  const image2 = fs.readFileSync('image2.png')
   expect(image1).toMatchImage(image2)
 })
 ```
