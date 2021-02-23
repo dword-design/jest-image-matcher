@@ -27,8 +27,13 @@ export const toMatchImage = (received, expected, options = {}) => {
         ? 'Expected the images to differ, but they are equal.'
         : [
             `Expected the images to be equal, but they differ by ${diff} pixels.`,
-            ...(options.outputDiffBase64
-              ? ['', 'base64:', diffImg.data.toString('base64')]
+            ...(options.dumpDiffToConsole
+              ? [
+                  '',
+                  `data:image/png;base64,${PNG.sync
+                    .write(diffImg)
+                    .toString('base64')}`,
+                ]
               : []),
           ] |> join('\n'),
     pass,

@@ -98,6 +98,40 @@ export default {
       .toBuffer()
     expect(img1).not.toMatchImage(img2)
   },
+  dumpDiffToConsole: () =>
+    withLocalTmpDir(async () => {
+      const img1 = await sharp({
+        create: {
+          background: { b: 0, g: 255, r: 0 },
+          channels: 3,
+          height: 48,
+          width: 48,
+        },
+      })
+        .png()
+        .toBuffer()
+      const img2 = await sharp({
+        create: {
+          background: { b: 255, g: 0, r: 0 },
+          channels: 3,
+          height: 48,
+          width: 48,
+        },
+      })
+        .png()
+        .toBuffer()
+      let message
+      try {
+        expect(img1).toMatchImage(img2, { dumpDiffToConsole: true })
+      } catch (error) {
+        message = error.message
+      }
+      expect(message).toMatch(endent`
+        Expected the images to be equal, but they differ by 2304 pixels.
+
+        data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAX0lEQVR4AdXBAQEAAAiDMKR/55uD7QYjTOIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIeBHYCXtKRLlYAAAAASUVORK5CYII=
+      `)
+    }),
   'equal images': async () => {
     const img = await sharp({
       create: {
@@ -164,40 +198,5 @@ export default {
       expect(message).toEqual(
         'Expected the images to be equal, but they differ by 2304 pixels.'
       )
-    }),
-  outputDiffBase64: () =>
-    withLocalTmpDir(async () => {
-      const img1 = await sharp({
-        create: {
-          background: { b: 0, g: 255, r: 0 },
-          channels: 3,
-          height: 48,
-          width: 48,
-        },
-      })
-        .png()
-        .toBuffer()
-      const img2 = await sharp({
-        create: {
-          background: { b: 255, g: 0, r: 0 },
-          channels: 3,
-          height: 48,
-          width: 48,
-        },
-      })
-        .png()
-        .toBuffer()
-      let message
-      try {
-        expect(img1).toMatchImage(img2, { outputDiffBase64: true })
-      } catch (error) {
-        message = error.message
-      }
-      expect(message).toMatch(endent`
-        Expected the images to be equal, but they differ by 2304 pixels.
-        
-        base64:
-        /wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA/
-      `)
     }),
 }

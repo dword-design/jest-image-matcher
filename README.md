@@ -89,7 +89,7 @@ Output the base64 diff image for debugging on CI servers:
 ```js
 it('should match', () => {
   …
-  expect(image).toMatchImage('image.png', { outputDiffBase64: true })
+  expect(image).toMatchImage('image.png', { dumpDiffToConsole: true })
 })
 ```
 
