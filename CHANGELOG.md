@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/dword-design/jest-image-matcher/compare/v1.2.0...v1.2.1) (2021-02-23)
+
+
+### Bug Fixes
+
+* rename outputDiffBase64 to dumpDiffToConsole ([cc8f7ce](https://github.com/dword-design/jest-image-matcher/commit/cc8f7ce937f464fbfc4f160909df7c3686f0b3a6))
+
 # [1.2.0](https://github.com/dword-design/jest-image-matcher/compare/v1.1.0...v1.2.0) (2021-02-23)
 
 
