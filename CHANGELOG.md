@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/dword-design/jest-image-matcher/compare/v1.2.1...v1.3.0) (2021-02-23)
+
+
+### Features
+
+* add composite diff image ([7ebf437](https://github.com/dword-design/jest-image-matcher/commit/7ebf4373155e36de91760cff103c42c2822a58e3))
+
 ## [1.2.1](https://github.com/dword-design/jest-image-matcher/compare/v1.2.0...v1.2.1) (2021-02-23)
 
 
