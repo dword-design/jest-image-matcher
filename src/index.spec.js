@@ -1,4 +1,4 @@
-import { outputFile } from 'fs-extra'
+import { outputFile, readFile } from 'fs-extra'
 import sharp from 'sharp'
 import withLocalTmpDir from 'with-local-tmp-dir'
 
@@ -7,10 +7,46 @@ import { toMatchImage } from '.'
 expect.extend({ toMatchImage })
 
 export default {
+  diffPath: () =>
+    withLocalTmpDir(async () => {
+      const img1 = await sharp({
+        create: {
+          background: { b: 0, g: 255, r: 0 },
+          channels: 3,
+          height: 48,
+          width: 48,
+        },
+      })
+        .png()
+        .toBuffer()
+      const img2 = await sharp({
+        create: {
+          background: { b: 255, g: 0, r: 0 },
+          channels: 3,
+          height: 48,
+          width: 48,
+        },
+      })
+        .png()
+        .toBuffer()
+      expect(img1).not.toMatchImage(img2, { diffPath: 'diff.png' })
+      expect(await readFile('diff.png')).toMatchImage(
+        await sharp({
+          create: {
+            background: { b: 0, g: 0, r: 255 },
+            channels: 3,
+            height: 48,
+            width: 48,
+          },
+        })
+          .png()
+          .toBuffer()
+      )
+    }),
   'different images': async () => {
     const img1 = await sharp({
       create: {
-        background: { b: 0, g: 0, r: 255 },
+        background: { b: 0, g: 255, r: 0 },
         channels: 3,
         height: 48,
         width: 48,
@@ -41,7 +77,7 @@ export default {
   'different images, and expecting to be different': async () => {
     const img1 = await sharp({
       create: {
-        background: { b: 0, g: 0, r: 255 },
+        background: { b: 0, g: 255, r: 0 },
         channels: 3,
         height: 48,
         width: 48,
@@ -64,7 +100,7 @@ export default {
   'equal images': async () => {
     const img = await sharp({
       create: {
-        background: { b: 0, g: 0, r: 255 },
+        background: { b: 0, g: 255, r: 0 },
         channels: 3,
         height: 48,
         width: 48,
@@ -77,7 +113,7 @@ export default {
   'equal images, and expecting not to be equal': async () => {
     const img = await sharp({
       create: {
-        background: { b: 0, g: 0, r: 255 },
+        background: { b: 0, g: 255, r: 0 },
         channels: 3,
         height: 48,
         width: 48,
@@ -99,7 +135,7 @@ export default {
     withLocalTmpDir(async () => {
       const img1 = await sharp({
         create: {
-          background: { b: 0, g: 0, r: 255 },
+          background: { b: 0, g: 255, r: 0 },
           channels: 3,
           height: 48,
           width: 48,

@@ -73,7 +73,15 @@ Compare to a file directly:
 ```js
 it('should match', () => {
   …
-  expect(image1).toMatchImage('image.png')
+  expect(image).toMatchImage('image.png')
+})
+```
+
+Save the diff to a file if the images do not match:
+```js
+it('should match', () => {
+  …
+  expect(image).toMatchImage('image.png', { diffPath: 'diff.png' })
 })
 ```
 
