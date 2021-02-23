@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/dword-design/jest-image-matcher/compare/v1.1.0...v1.2.0) (2021-02-23)
+
+
+### Features
+
+* add outputDiffBase64 option ([516e1c6](https://github.com/dword-design/jest-image-matcher/commit/516e1c61fcff4e0167f013cb920273bc208c9498))
+
 # [1.1.0](https://github.com/dword-design/jest-image-matcher/compare/v1.0.0...v1.1.0) (2021-02-23)
 
 

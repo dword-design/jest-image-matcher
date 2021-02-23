@@ -1,6 +1,6 @@
 {
   "name": "jest-image-matcher",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A Jest matcher for image comparisons based on pixelmatch. Can also be used with Mocha. Useful for visual regression testing.",
   "keywords": [
     "assert",
