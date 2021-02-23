@@ -31,17 +31,8 @@ export default {
         .png()
         .toBuffer()
       expect(img1).not.toMatchImage(img2, { diffPath: 'diff.png' })
-      expect(await readFile('diff.png')).toMatchImage(
-        await sharp({
-          create: {
-            background: { b: 0, g: 0, r: 255 },
-            channels: 3,
-            height: 48,
-            width: 48,
-          },
-        })
-          .png()
-          .toBuffer()
+      expect((await readFile('diff.png')).toString('base64')).toEqual(
+        'iVBORw0KGgoAAAANSUhEUgAAAJAAAAAwCAYAAAD+WvNWAAAAhklEQVR4Ae3BQQ0AIADEsHH+PYOIvUjWHi6Xj93D1w6Xn41EGIkwEmEkwkiEkQgjEUYijEQYiTASYSTCSISRCCMRRiKMRBiJMBJhJMJIhJEIIxFGIoxEGIkwEmEkwkiEkQgjEUYijEQYiTASYSTCSISRCCMRRiKMRBiJMBJhJMJIhJEIIxEebTUEXtVDAvcAAAAASUVORK5CYII='
       )
     }),
   'different images': async () => {
@@ -129,7 +120,7 @@ export default {
       expect(message).toMatch(endent`
         Expected the images to be equal, but they differ by 2304 pixels.
 
-        data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAX0lEQVR4AdXBAQEAAAiDMKR/55uD7QYjTOIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIkTuIeBHYCXtKRLlYAAAAASUVORK5CYII=
+        data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAAAwCAYAAAD+WvNWAAAAhklEQVR4Ae3BQQ0AIADEsHH+PYOIvUjWHi6Xj93D1w6Xn41EGIkwEmEkwkiEkQgjEUYijEQYiTASYSTCSISRCCMRRiKMRBiJMBJhJMJIhJEIIxFGIoxEGIkwEmEkwkiEkQgjEUYijEQYiTASYSTCSISRCCMRRiKMRBiJMBJhJMJIhJEIIxEebTUEXtVDAvcAAAAASUVORK5CYII=
       `)
     }),
   'equal images': async () => {

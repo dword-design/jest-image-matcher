@@ -17,9 +17,31 @@ export const toMatchImage = (received, expected, options = {}) => {
     img1.width,
     img1.height
   )
+  const compositeImg = new PNG({ height: img1.height, width: 3 * img1.width })
+  PNG.bitblt(img1, compositeImg, 0, 0, img1.width, img1.height, 0, 0)
+  PNG.bitblt(
+    diffImg,
+    compositeImg,
+    0,
+    0,
+    img1.width,
+    img1.height,
+    img1.width,
+    0
+  )
+  PNG.bitblt(
+    img2,
+    compositeImg,
+    0,
+    0,
+    img1.width,
+    img1.height,
+    2 * img1.width,
+    0
+  )
   const pass = diff === 0
   if (!pass && options.diffPath) {
-    writeFileSync(options.diffPath, PNG.sync.write(diffImg))
+    writeFileSync(options.diffPath, PNG.sync.write(compositeImg))
   }
   return {
     message: () =>
@@ -31,7 +53,7 @@ export const toMatchImage = (received, expected, options = {}) => {
               ? [
                   '',
                   `data:image/png;base64,${PNG.sync
-                    .write(diffImg)
+                    .write(compositeImg)
                     .toString('base64')}`,
                 ]
               : []),
