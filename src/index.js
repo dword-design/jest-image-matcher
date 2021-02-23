@@ -1,3 +1,4 @@
+import { join } from '@dword-design/functions'
 import { readFileSync, writeFileSync } from 'fs-extra'
 import pixelmatch from 'pixelmatch'
 import { PNG } from 'pngjs'
@@ -24,7 +25,12 @@ export const toMatchImage = (received, expected, options = {}) => {
     message: () =>
       pass
         ? 'Expected the images to differ, but they are equal.'
-        : `Expected the images to be equal, but they differ by ${diff} pixels.`,
+        : [
+            `Expected the images to be equal, but they differ by ${diff} pixels.`,
+            ...(options.outputDiffBase64
+              ? ['', 'base64:', diffImg.data.toString('base64')]
+              : []),
+          ] |> join('\n'),
     pass,
   }
 }

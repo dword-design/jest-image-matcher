@@ -33,6 +33,7 @@
     "test": "base test"
   },
   "dependencies": {
+    "@dword-design/functions": "^1.2.0",
     "fs-extra": "^9.1.0",
     "pixelmatch": "^5.2.1",
     "pngjs": "^5.0.0"

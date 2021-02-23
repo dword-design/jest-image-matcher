@@ -1146,6 +1146,15 @@
     lodash "^4.17.15"
     tinycolor2 "^1.4.1"
 
+"@dword-design/functions@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@dword-design/functions/-/functions-1.2.0.tgz#fa4ed4643a4f801f0f984d09bcef32c3b71afffb"
+  integrity sha512-TE6zdexGjlj6t5CaVtfh28rTSdQOOxhmRzkj0++cc7G4xe3dJ3xVvT9k6O0ECrPnHOMypkoCcXOo5SNFmBUQRw==
+  dependencies:
+    endent dword-design/endent#fork
+    lodash "^4.17.15"
+    tinycolor2 "^1.4.1"
+
 "@dword-design/functions@^2.2.2", "@dword-design/functions@^2.2.4", "@dword-design/functions@^2.7.2":
   version "2.7.2"
   resolved "https://registry.yarnpkg.com/@dword-design/functions/-/functions-2.7.2.tgz#08ef65bf7fea7cfb1e4252ce4536df46b866cf0e"
@@ -3263,7 +3272,7 @@ end-of-stream@^1.0.0, end-of-stream@^1.1.0, end-of-stream@^1.4.1:
   dependencies:
     once "^1.4.0"
 
-endent@dword-design/endent#fork:
+endent@dword-design/endent#fork, "endent@github:dword-design/endent#fork":
   version "1.4.0"
   resolved "https://codeload.github.com/dword-design/endent/tar.gz/be5433db67eaec07c6c9d00ba3bed2ed946dc664"
   dependencies:

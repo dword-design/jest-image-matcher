@@ -85,6 +85,14 @@ it('should match', () => {
 })
 ```
 
+Output the base64 diff image for debugging on CI servers:
+```js
+it('should match', () => {
+  …
+  expect(image).toMatchImage('image.png', { outputDiffBase64: true })
+})
+```
+
 Usage with [puppeteer](https://www.npmjs.com/package/puppeteer):
 ```js
 it('should match', async () => {
