@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/dword-design/jest-image-matcher/compare/v1.0.0...v1.1.0) (2021-02-23)
+
+
+### Features
+
+* add diffPath option ([29a8a72](https://github.com/dword-design/jest-image-matcher/commit/29a8a7290297f5e9863dcf53881ef1d37d557c24))
+
 # 1.0.0 (2021-02-20)
 
 
