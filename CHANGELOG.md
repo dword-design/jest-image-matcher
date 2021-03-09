@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/dword-design/jest-image-matcher/compare/v1.3.0...v1.3.1) (2021-03-09)
+
+
+### Bug Fixes
+
+* update changed files ([1c9b168](https://github.com/dword-design/jest-image-matcher/commit/1c9b168c2b4f61dc8cb26a3c95f7bd28f3147f08))
+
 # [1.3.0](https://github.com/dword-design/jest-image-matcher/compare/v1.2.1...v1.3.0) (2021-02-23)
 
 
