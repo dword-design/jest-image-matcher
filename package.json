@@ -17,6 +17,7 @@
     "visual"
   ],
   "repository": "dword-design/jest-image-matcher",
+  "funding": "https://www.buymeacoffee.com/dword",
   "license": "MIT",
   "author": "Sebastian Landwehr <info@dword-design.de>",
   "main": "dist/index.js",
