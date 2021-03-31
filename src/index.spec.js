@@ -20,6 +20,7 @@ export default {
       })
         .png()
         .toBuffer()
+
       const img2 = await sharp({
         create: {
           background: { b: 255, g: 0, r: 0 },
@@ -46,6 +47,7 @@ export default {
     })
       .png()
       .toBuffer()
+
     const img2 = await sharp({
       create: {
         background: { b: 255, g: 0, r: 0 },
@@ -77,6 +79,7 @@ export default {
     })
       .png()
       .toBuffer()
+
     const img2 = await sharp({
       create: {
         background: { b: 255, g: 0, r: 0 },
@@ -101,6 +104,7 @@ export default {
       })
         .png()
         .toBuffer()
+
       const img2 = await sharp({
         create: {
           background: { b: 255, g: 0, r: 0 },
@@ -169,6 +173,7 @@ export default {
       })
         .png()
         .toBuffer()
+
       const img2 = await sharp({
         create: {
           background: { b: 255, g: 0, r: 0 },
