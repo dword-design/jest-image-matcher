@@ -1,3 +1,10 @@
+## [1.3.5](https://github.com/dword-design/jest-image-matcher/compare/v1.3.4...v1.3.5) (2021-03-31)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#9](https://github.com/dword-design/jest-image-matcher/issues/9)) ([b0355e6](https://github.com/dword-design/jest-image-matcher/commit/b0355e6e6f5609c6c3d4aeb1f4f871bf5c6c9db4))
+
 ## [1.3.4](https://github.com/dword-design/jest-image-matcher/compare/v1.3.3...v1.3.4) (2021-03-23)
 
 
