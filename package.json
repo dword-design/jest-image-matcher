@@ -42,7 +42,7 @@
   "devDependencies": {
     "@dword-design/base": "^7.0.7",
     "sharp": "^0.28.0",
-    "with-local-tmp-dir": "^2.2.15"
+    "with-local-tmp-dir": "^2.2.18"
   },
   "publishConfig": {
     "access": "public"
