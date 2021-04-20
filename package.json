@@ -2,20 +2,7 @@
   "name": "jest-image-matcher",
   "version": "1.3.7",
   "description": "A Jest matcher for image comparisons based on pixelmatch. Can also be used with Mocha. Useful for visual regression testing.",
-  "keywords": [
-    "assert",
-    "compare",
-    "comparison",
-    "expect",
-    "extend",
-    "image",
-    "jest",
-    "match",
-    "matcher",
-    "mocha",
-    "regression",
-    "visual"
-  ],
+  "keywords": [],
   "repository": "dword-design/jest-image-matcher",
   "funding": "https://www.buymeacoffee.com/dword",
   "license": "MIT",
@@ -46,5 +33,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "homepage": ""
 }
