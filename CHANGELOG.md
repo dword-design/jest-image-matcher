@@ -1,3 +1,10 @@
+## [1.3.8](https://github.com/dword-design/jest-image-matcher/compare/v1.3.7...v1.3.8) (2021-04-26)
+
+
+### Bug Fixes
+
+* update dependency with-local-tmp-dir to v3 ([#17](https://github.com/dword-design/jest-image-matcher/issues/17)) ([e1e4960](https://github.com/dword-design/jest-image-matcher/commit/e1e4960d81d8e2ebb2c1e7e8ab036b3325c8384b))
+
 ## [1.3.7](https://github.com/dword-design/jest-image-matcher/compare/v1.3.6...v1.3.7) (2021-04-12)
 
 
