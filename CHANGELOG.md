@@ -1,3 +1,19 @@
+# [2.0.0](https://github.com/dword-design/jest-image-matcher/compare/v1.3.8...v2.0.0) (2021-05-03)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/base to v8 ([#20](https://github.com/dword-design/jest-image-matcher/issues/20)) ([e502b0e](https://github.com/dword-design/jest-image-matcher/commit/e502b0e16db5367c95c5fd77257039b88b30dcf1))
+
+
+### BREAKING CHANGES
+
+* require Node.js >= 12
+
+Co-authored-by: Renovate Bot <bot@renovateapp.com>
+Co-authored-by: Sebastian Landwehr <info@dword-design.de>
+Co-authored-by: GitHub Actions <actions@github.com>
+
 ## [1.3.8](https://github.com/dword-design/jest-image-matcher/compare/v1.3.7...v1.3.8) (2021-04-26)
 
 
