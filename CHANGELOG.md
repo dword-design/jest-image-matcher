@@ -1,3 +1,11 @@
+## [2.0.3](https://github.com/dword-design/jest-image-matcher/compare/v2.0.2...v2.0.3) (2021-05-04)
+
+
+### Bug Fixes
+
+* update dependency fs-extra to v10 ([#22](https://github.com/dword-design/jest-image-matcher/issues/22)) ([242aea3](https://github.com/dword-design/jest-image-matcher/commit/242aea36e85ace8bcd8b13d5bc3e020c9fd09952))
+* update dependency with-local-tmp-dir to v4 ([#23](https://github.com/dword-design/jest-image-matcher/issues/23)) ([57bf681](https://github.com/dword-design/jest-image-matcher/commit/57bf681dc3894a8f74da8e0138d21b624eb146bd))
+
 ## [2.0.2](https://github.com/dword-design/jest-image-matcher/compare/v2.0.1...v2.0.2) (2021-05-04)
 
 
