@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/dword-design/jest-image-matcher/compare/v2.0.1...v2.0.2) (2021-05-04)
+
+
+### Bug Fixes
+
+* update dependency pngjs to v6 ([#1](https://github.com/dword-design/jest-image-matcher/issues/1)) ([58b46d8](https://github.com/dword-design/jest-image-matcher/commit/58b46d8f1b54da427865729cf08f70fe8170304f))
+
 ## [2.0.1](https://github.com/dword-design/jest-image-matcher/compare/v2.0.0...v2.0.1) (2021-05-04)
 
 
