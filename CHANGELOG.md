@@ -1,3 +1,10 @@
+## [2.0.8](https://github.com/dword-design/jest-image-matcher/compare/v2.0.7...v2.0.8) (2021-07-20)
+
+
+### Bug Fixes
+
+* update config files ([ac9bd0a](https://github.com/dword-design/jest-image-matcher/commit/ac9bd0a1eae0d46dc35f08783eeff6685c7782f2))
+
 ## [2.0.7](https://github.com/dword-design/jest-image-matcher/compare/v2.0.6...v2.0.7) (2021-07-06)
 
 
