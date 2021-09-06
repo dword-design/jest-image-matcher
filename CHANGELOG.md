@@ -1,3 +1,10 @@
+## [2.0.9](https://github.com/dword-design/jest-image-matcher/compare/v2.0.8...v2.0.9) (2021-09-06)
+
+
+### Bug Fixes
+
+* update dependency sharp to ^0.29.0 ([#35](https://github.com/dword-design/jest-image-matcher/issues/35)) ([84d0ec5](https://github.com/dword-design/jest-image-matcher/commit/84d0ec5882e51d0b00be1a066522e3c04bbdc917))
+
 ## [2.0.8](https://github.com/dword-design/jest-image-matcher/compare/v2.0.7...v2.0.8) (2021-07-20)
 
 
