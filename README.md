@@ -3,7 +3,7 @@
 <!-- /TITLE -->
 
 <!-- BADGES/ -->
-<p>
+  <p>
     <a href="https://npmjs.org/package/jest-image-matcher">
       <img
         src="https://img.shields.io/npm/v/jest-image-matcher.svg"
