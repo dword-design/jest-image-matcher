@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/dword-design/jest-image-matcher/compare/v2.0.11...v3.0.0) (2023-01-07)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#81](https://github.com/dword-design/jest-image-matcher/issues/81)) ([ddafe0f](https://github.com/dword-design/jest-image-matcher/commit/ddafe0fd7a01fee98c03ae70e657f22b2d66bc76))
+
+
+### BREAKING CHANGES
+
+* Drop Node 12 support, move to ESM
+
 ## [2.0.11](https://github.com/dword-design/jest-image-matcher/compare/v2.0.10...v2.0.11) (2022-01-12)
 
 
