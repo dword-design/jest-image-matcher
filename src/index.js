@@ -1,11 +1,11 @@
 import { join } from '@dword-design/functions'
-import { readFileSync, writeFileSync } from 'fs-extra'
+import fs from 'fs-extra'
 import pixelmatch from 'pixelmatch'
 import { PNG } from 'pngjs'
 
 export const toMatchImage = (received, expected, options = {}) => {
   if (typeof expected === 'string') {
-    expected = readFileSync(expected)
+    expected = fs.readFileSync(expected)
   }
 
   const img1 = PNG.sync.read(received)
@@ -47,7 +47,7 @@ export const toMatchImage = (received, expected, options = {}) => {
 
   const pass = diff === 0
   if (!pass && options.diffPath) {
-    writeFileSync(options.diffPath, PNG.sync.write(compositeImg))
+    fs.writeFileSync(options.diffPath, PNG.sync.write(compositeImg))
   }
 
   return {

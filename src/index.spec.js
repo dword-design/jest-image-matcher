@@ -1,9 +1,9 @@
 import { endent } from '@dword-design/functions'
-import { outputFile, readFile } from 'fs-extra'
+import fs from 'fs-extra'
 import sharp from 'sharp'
 import withLocalTmpDir from 'with-local-tmp-dir'
 
-import { toMatchImage } from '.'
+import { toMatchImage } from './index.js'
 
 expect.extend({ toMatchImage })
 
@@ -32,7 +32,7 @@ export default {
         .png()
         .toBuffer()
       expect(img1).not.toMatchImage(img2, { diffPath: 'diff.png' })
-      expect((await readFile('diff.png')).toString('base64')).toEqual(
+      expect((await fs.readFile('diff.png')).toString('base64')).toEqual(
         'iVBORw0KGgoAAAANSUhEUgAAAJAAAAAwCAYAAAD+WvNWAAAAhklEQVR4Ae3BQQ0AIADEsHH+PYOIvUjWHi6Xj93D1w6Xn41EGIkwEmEkwkiEkQgjEUYijEQYiTASYSTCSISRCCMRRiKMRBiJMBJhJMJIhJEIIxFGIoxEGIkwEmEkwkiEkQgjEUYijEQYiTASYSTCSISRCCMRRiKMRBiJMBJhJMJIhJEIIxEebTUEXtVDAvcAAAAASUVORK5CYII='
       )
     }),
@@ -184,7 +184,7 @@ export default {
       })
         .png()
         .toBuffer()
-      await outputFile('img.png', img2)
+      await fs.outputFile('img.png', img2)
       let message
       try {
         expect(img1).toMatchImage('img.png')
