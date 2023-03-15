@@ -33,7 +33,7 @@ export default {
         .toBuffer()
       expect(img1).not.toMatchImage(img2, { diffPath: 'diff.png' })
       expect((await fs.readFile('diff.png')).toString('base64')).toEqual(
-        'iVBORw0KGgoAAAANSUhEUgAAAJAAAAAwCAYAAAD+WvNWAAAAhklEQVR4Ae3BQQ0AIADEsHH+PYOIvUjWHi6Xj93D1w6Xn41EGIkwEmEkwkiEkQgjEUYijEQYiTASYSTCSISRCCMRRiKMRBiJMBJhJMJIhJEIIxFGIoxEGIkwEmEkwkiEkQgjEUYijEQYiTASYSTCSISRCCMRRiKMRBiJMBJhJMJIhJEIIxEebTUEXtVDAvcAAAAASUVORK5CYII='
+        'iVBORw0KGgoAAAANSUhEUgAAAJAAAAAwCAYAAAD+WvNWAAAAhklEQVR4Ae3BQQ0AIADEsHH+PYOIvUjWHi6Xj93D1w6Xn41EGIkwEmEkwkiEkQgjEUYijEQYiTASYSTCSISRCCMRRiKMRBiJMBJhJMJIhJEIIxFGIoxEGIkwEmEkwkiEkQgjEUYijEQYiTASYSTCSISRCCMRRiKMRBiJMBJhJMJIhJEIIxEebTUEXtVDAvcAAAAASUVORK5CYII=',
       )
     }),
   'different images': async () => {
@@ -65,7 +65,7 @@ export default {
       message = error.message
     }
     expect(message).toEqual(
-      'Expected the images to be equal, but they differ by 2304 pixels.'
+      'Expected the images to be equal, but they differ by 2304 pixels.',
     )
   },
   'different images, and expecting to be different': async () => {
@@ -158,7 +158,7 @@ export default {
       message = error.message
     }
     expect(message).toEqual(
-      'Expected the images to differ, but they are equal.'
+      'Expected the images to differ, but they are equal.',
     )
   },
   file: () =>
@@ -192,7 +192,7 @@ export default {
         message = error.message
       }
       expect(message).toEqual(
-        'Expected the images to be equal, but they differ by 2304 pixels.'
+        'Expected the images to be equal, but they differ by 2304 pixels.',
       )
     }),
 }
