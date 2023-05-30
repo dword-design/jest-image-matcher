@@ -19,7 +19,7 @@ export const toMatchImage = (received, expected, options = {}) => {
     img2.data,
     diffImg.data,
     img1.width,
-    img1.height
+    img1.height,
   )
 
   const compositeImg = new PNG({ height: img1.height, width: 3 * img1.width })
@@ -32,7 +32,7 @@ export const toMatchImage = (received, expected, options = {}) => {
     img1.width,
     img1.height,
     img1.width,
-    0
+    0,
   )
   PNG.bitblt(
     img2,
@@ -42,7 +42,7 @@ export const toMatchImage = (received, expected, options = {}) => {
     img1.width,
     img1.height,
     2 * img1.width,
-    0
+    0,
   )
 
   const pass = diff === 0
