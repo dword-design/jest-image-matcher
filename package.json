@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@dword-design/base": "^9.2.0",
-    "sharp": "^0.31.3",
+    "sharp": "^0.33.0",
     "with-local-tmp-dir": "^4.0.0"
   },
   "engines": {
