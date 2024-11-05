@@ -40,7 +40,7 @@
     "@dword-design/functions": "^4.0.0",
     "fs-extra": "^10.0.0",
     "pixelmatch": "^5.2.1",
-    "pngjs": "^6.0.0"
+    "pngjs": "^7.0.0"
   },
   "devDependencies": {
     "@dword-design/base": "^9.2.0",
