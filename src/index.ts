@@ -84,3 +84,12 @@ export const toMatchImage = (
     pass,
   };
 };
+
+declare module 'expect' {
+  interface Matchers<R> {
+    toMatchImage(
+      expected: Buffer | string,
+      options?: Partial<JestImageMatcherOptions>,
+    ): R;
+  }
+}
