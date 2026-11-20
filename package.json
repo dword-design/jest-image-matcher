@@ -50,7 +50,7 @@
     "pngjs": "^7.0.0"
   },
   "devDependencies": {
-    "@dword-design/base": "^16",
+    "@dword-design/base": "^17.0.0",
     "@playwright/test": "^1.57.0",
     "@types/fs-extra": "^11.0.4",
     "@types/pngjs": "^6.0.5",
